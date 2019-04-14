@@ -1,6 +1,8 @@
 CustomerService-- Bean class
 Customer.xml -- A bean configuration file
 
+In this code, the aspect that we are looking at is logging. Logging of the execution order is captured and printed to the console using “print statements”.
+
 In Spring AOP, 4 type of advices are supported :
 
 1. Before advice – Run before the method execution
