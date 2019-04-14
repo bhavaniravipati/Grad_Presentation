@@ -1,4 +1,9 @@
+Firstly, to utlize spring AOP you need to add spring dependencies to pom.xml file of your project. The dependencies include spring-core, spring-context, spring-aop, spring-beans, cglib
+
+In this example code, we have already added these in the pom.xml file
+
 CustomerService-- Bean class
+<br/>
 Customer.xml -- A bean configuration file
 
 In this code, the aspect that we are looking at is logging. Logging of the execution order is captured and printed to the console using “print statements”.
