@@ -12,9 +12,9 @@ ApplicationContext is another Spring's IoC container, which is an implementation
 ApplicationContext creates objects eventhough we don't request but the BeanFactory creates objects only if request.
 
 Address object is injected to Employee object in two ways:
-Dependency injection is achived by giving Address object as argument in the Employee Constructor and <constructor-arg> 
+Dependency injection is achived by giving Address object as argument in the Employee Constructor and constructor-arg
 in the Employeebean.xml 
 DI is also achived using setter Injection by giving Address object in the argument of setAddress method of Employee class
-and <property name="address" ref="adrs"> in the EmployeeBean.xml.
+and property name="address" ref="adrs" in the EmployeeBean.xml.
 
 
