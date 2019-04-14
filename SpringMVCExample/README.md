@@ -28,7 +28,7 @@ to a view named “welcome” and the data model is being passed back to the bro
 
 The DispatcherServlet will load our HelloWorldController.class through the package name mentioned in "<context:component-scan" tag. Also we have defined a bean viewResolver in the DispatcherServlet. This bean will resolve the view and add prefix string /WEB-INF/jsp/  and suffix .jsp to the view in ModelAndView.
 
-When the HelloWorldController.class returns ModelandView object to ,the DispatcherServlet, mvc-servlet.xml, the logical view name "welcome" is mapped to /WEB-INF/jsp/welcome.jsp via viewResolver bean. Thus, DispatcherServlet contcats the  chosen view "welcome.jsp" and it renders the page in browser depending on the model data. The model data here is "message" data returned by the HelloWorldController.class. 
+When the HelloWorldController.class returns ModelandView object to ,the DispatcherServlet, mvc-servlet.xml, the logical view name "welcome" is mapped to /WEB-INF/jsp/welcome.jsp via viewResolver bean. Thus, DispatcherServlet contacts the  chosen view "welcome.jsp" and it renders the page in browser depending on the model data. The model data here is "message" data returned by the HelloWorldController.class. 
 
 
 Read more:
