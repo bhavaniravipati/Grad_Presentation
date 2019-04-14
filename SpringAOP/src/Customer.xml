@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+     
+    <bean id="customerService" class="CustomerService">
+    	<property name="name" value="Google"></property>
+    	<property name="url" value="https://www.google.com/"></property>
+    </bean>
+    
+    <bean id="hijackBeforeMethodBean" class="HijackBeforeMethod" />
+
+	<bean id="customerServiceProxy1" 
+                 class="org.springframework.aop.framework.ProxyFactoryBean">
+
+		<property name="target" ref="customerService" />
+
+		<property name="interceptorNames">
+			<list>
+				<value>hijackBeforeMethodBean</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="hijackAfterMethodBean" class="HijackAfterMethod" />
+
+	<bean id="customerServiceProxy2" 
+                class="org.springframework.aop.framework.ProxyFactoryBean">
+
+		<property name="target" ref="customerService" />
+
+		<property name="interceptorNames">
+			<list>
+				<value>hijackAfterMethodBean</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="hijackThrowExceptionBean" class="HijackThrowException" />
+
+	<bean id="customerServiceProxy3" 
+                 class="org.springframework.aop.framework.ProxyFactoryBean">
+
+		<property name="target" ref="customerService" />
+
+		<property name="interceptorNames">
+			<list>
+				<value>hijackThrowExceptionBean</value>
+			</list>
+		</property>
+	</bean>
+	
+	
+	<bean id="hijackAroundMethodBean" class="HijackAroundMethod" />
+
+	<bean id="customerServiceProxy4" 
+                class="org.springframework.aop.framework.ProxyFactoryBean">
+
+		<property name="target" ref="customerService" />
+
+		<property name="interceptorNames">
+			<list>
+				<value>hijackAroundMethodBean</value>
+			</list>
+		</property>
+	</bean>
+</beans> 
