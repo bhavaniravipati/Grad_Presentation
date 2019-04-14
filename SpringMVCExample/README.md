@@ -5,7 +5,7 @@ In this example code, we have already added these in the pom.xml file
 
 When a user sends in a web request through a URL, web.xml file will forward all the requests to the DispatcherServlet of our application.
 The way we name a Dispatcher Servlet .xml file is servlet-name-servlet.xml. The servlet name in our example is mvc. 
-So the Dispatcher Servlet file name in our example code is "mvc-servlet". 
+So the Dispatcher Servlet file name in our example code is "mvc-servlet.xml". 
 
 If the request matches the URL pattern of DispatcherServlet then it will be processed by Spring MVC otherwise not.
 
