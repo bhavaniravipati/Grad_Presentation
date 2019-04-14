@@ -4,7 +4,7 @@ The dependencies include spring-core, spring-context, spring-aop, spring-webmvc,
 In this example code, we have already added these in the pom.xml file.</br>
 Install Tomcat server, in the Eclipse-->right click on Project-->properties-->Targeted Runtimes give the Apache Tomcat which you have downloaded.</br>
 
-In servers Select the Tomcat version you have downloaded. </br>
+In servers Select the Tomcat version you have downloaded. Tomcat server is setup for the project </br>
 
 When a user sends in a web request through a URL, web.xml file will forward all the requests to the DispatcherServlet of our application.</br>
 The way we name a Dispatcher Servlet .xml file is servlet-name-servlet.xml. The servlet name in our example is mvc.</br> 
